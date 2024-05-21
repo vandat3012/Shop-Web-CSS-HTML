@@ -1,0 +1,37 @@
+/*Xây dựng phần tử gốc cho toàn dự án*/
+:root {
+    --white-color : #ffffff;
+    --black-color : #000000;
+    --text-color : #333333;
+}
+/*Áp dụng cho tất cả các phần tử html được nhúng file base.css*/
+* {
+    box-sizing: inherit;
+}
+
+html {
+    /*Mặc định là 16px và để 62.5 cho phù hợp để tính rem dễ hơn*/
+    font-size: 62.5%;
+    /*mặc định cuản line-height chiều cao của mỗi dòng*/
+    line-height: 1.6rem;
+    /*sans-serif là 1 chủng font không chân ví dụ Roboto bị lỗi thì nó hiển thị sans-serif */
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+.grid {
+    /*đối với màn hình có kích thước lớn hơn 1200px thì grid là 1200px nếu nhỏ hơn 1200px thì là 100%*/
+    width: 1200px;
+    max-width: 100%;
+    /*tự động căn giữa trái phảu*/
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
