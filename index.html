@@ -13,26 +13,100 @@
     <link rel="stylesheet" href="./assets/reset_css/reset_css.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.5.2-web/css/all.min.css">
 </head>
 <body>
 <div class="app">
     <div class="header">
-        <nav class="header__navbar">
-            <ul class="header__navbar-list">
-                <li class="header__navbar-item">Vào của hàng ứng dụng trên TickId</li>
-                <li class="header__navbar-item">Kết nối</li>
-            </ul>
-            <ul class="header__navbar-list">
-                <li class="header__navbar-item">
-                    <a href="" class="header__navbar-item-link">Thông báo</a>
-                </li>
-                <li class="header__navbar-item">
-                    <a href="" class="header__navbar-item-link">Trợ giúp</a>
-                </li>
-                <li class="header__navbar-item">Đăng ký</li>
-                <li class="header__navbar-item">Đăng nhập</li>
-            </ul>
-        </nav>
+        <div class="grid">
+            <nav class="header__navbar">
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item">Trang chủ</li>
+                    <li class="header__navbar-item header__navbar-item--has-qr">Tải ứng dụng
+                        <div class="header__qr">
+                            <img src="./assets/image/qr_app.png" alt="QR Code" class="header__qr-img">
+                            <div class="header__qr-apps">
+                                <a href="" class="header__qr-link">
+                                    <img src="./assets/image/app_store.png" alt="App Store" class="header__qr-apps-download-img">
+                                </a>
+                                <a href="" class="header__qr-link">
+                                    <img src="./assets/image/google_play.png" alt="Google Play" class="header__qr-apps-download-img">
+                                </a>
+                                <a href="" class="header__qr-link">
+                                    <img src="./assets/image/app_gallery.png" alt="App Gallery" class="header__qr-apps-download-img">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__navbar-item header__navbar-item--separate">Trở thành người bán sách</li>
+                    <li class="header__navbar-item">
+                        <span class="header__navbar-title--no-pointer">
+                            Kết nối
+                        </span>
+                        <a href="" class="header__navbar-icon-link">
+                            <i class="navbar__header-icon fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="" class="header__navbar-icon-link">
+                            <i class="navbar__header-icon fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item header__navbar-item--has-notify">
+                        <a href="" class="header__navbar-item-link">
+                            <i class="navbar__header-icon fa-regular fa-bell"></i>
+                            Thông báo
+                        </a>
+                        <div class="header__notify">
+                            <div class="header__notify-header">
+                                <h3>Thông báo mới nhận</h3>
+                            </div>
+                            <ul class="header__notify-list">
+                                <li class="header__notify-item header__notify-item--viewed">
+                                    <a href="" class="header__notify-link">
+                                        <img src="assets/image/png-la-gi-3.jpg.webp" alt="Sách trừ tà" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Đó là lúc mà mọi ước mơ dường như tan biến, và chúng ta cảm thấy mất hứng thú với cuộc sống.</span>
+                                            <span class="header__notify-description">Đó là lúc mà mọi ước mơ dường như tan biến, và chúng ta cảm thấy mất hứng thú với cuộc sống.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="assets/image/png-la-gi-3.jpg.webp" alt="Sách trừ tà" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Đó là lúc mà mọi ước mơ dường như tan biến, và chúng ta cảm thấy mất hứng thú với cuộc sống.</span>
+                                            <span class="header__notify-description">Đó là lúc mà mọi ước mơ dường như tan biến, và chúng ta cảm thấy mất hứng thú với cuộc sống.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="assets/image/png-la-gi-3.jpg.webp" alt="Sách trừ tà" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Thông tin sách trừ tà trong đó có 1 cái gì gì đó haizzzzz</span>
+                                            <span class="header__notify-description">Mô tả cuốn sách trừ tà của 1 ai đó có thẻ xử lý all mn vvvvvvvvvvvvvvvvvv</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="header__notify-footer">
+                                <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="" class="header__navbar-item-link">
+                            <i class="navbar__header-icon fa-regular fa-circle-question"></i>
+                            Trợ giúp
+                        </a>
+                    </li>
+                    <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng ký
+                    </li>
+                    <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li>
+                </ul>
+            </nav>
+        </div>
     </div>
     <div class="container"></div>
     <div class="footer"></div>

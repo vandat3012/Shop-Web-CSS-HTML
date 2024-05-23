@@ -1,5 +1,6 @@
 /*Xây dựng phần tử gốc cho toàn dự án*/
 :root {
+    --primary-color : rgb(71,97,254);
     --white-color : #ffffff;
     --black-color : #000000;
     --text-color : #333333;
@@ -21,7 +22,7 @@ html {
 
 .grid {
     /*đối với màn hình có kích thước lớn hơn 1200px thì grid là 1200px nếu nhỏ hơn 1200px thì là 100%*/
-    width: 1200px;
+    width: 1450px;
     max-width: 100%;
     /*tự động căn giữa trái phảu*/
     margin: 0 auto;
@@ -34,4 +35,13 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+}
+/*Animation*/
+@keyframes FaceIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

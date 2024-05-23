@@ -1,0 +1,266 @@
+.header {
+    height: 120px;
+    background-image: linear-gradient(0, #5463e7, #4761ff);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 6px;
+}
+
+.header__navbar-item,
+.header__navbar-item-link {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.header__navbar-item,
+.header__navbar-item-link,
+.navbar__header-icon-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+/*khi hover vào header__navbar-item--has-qr thì sẽ css thay đổi cho header__qr */
+.header__navbar-item--has-qr:hover .header__qr {
+    display: block;
+}
+
+.header__navbar-item--has-notify:hover .header__notify {
+    display: block;
+}
+
+.header__navbar-item {
+    margin: 0 6px;
+    position: relative;
+    height: 26px;
+}
+
+.header__navbar-item--strong {
+    font-weight: 400;
+}
+
+.header__navbar-item--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 2px solid #a87c7c;
+    height: 16px;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__navbar-icon-link:hover,
+.header__navbar-item-link:hover,
+.header__navbar-item:hover {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+/*icon*/
+.header__navbar-icon-link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.navbar__header-icon {
+    font-size: 1.7rem;
+    margin: 0 4px;
+}
+
+.header__navbar-title--no-pointer {
+    cursor: text;
+    color: var(--white-color);
+}
+
+/*Header QR code*/
+.header__qr {
+    position: absolute;
+    width: 182px;
+    background-color: var(--white-color);
+    left: 0;
+    top: 120%;
+    padding: 7px;
+    border-radius: 2px;
+    display: none;
+    animation: FaceIn ease-in .3s;
+    will-change: opacity;
+}
+
+.header__qr::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -13px;
+    width: 100%;
+    height: 20px;
+    display: block;
+}
+
+.header__qr-img {
+    width: 100%;
+}
+
+.header__qr-apps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header__qr-link:nth-child(1) {
+    margin-left: 10px;
+}
+
+
+.header__qr-link:nth-child(2) {
+    margin-right: 8px;
+}
+
+.header__qr-link:nth-child(3) {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.header__qr-apps-download-img {
+    height: 16px;
+    width: 70px;
+}
+
+/*Header notification*/
+.header__notify {
+    position: absolute;
+    top: 120%;
+    right: 1px;
+    width: 400px;
+    background-color: var(--white-color);
+    border: 1px solid #969494;
+    border-radius: 2px;
+    cursor: default;
+    animation: headerNotifyGrowth ease-in 0.18s;
+    /*Dùng transform-origin để thay đổi vị trí ban đầu mà item xuất hiện*/
+    transform-origin: calc(100% - 20px) top;
+    /*will-change để cho trình duyệt biết những gì thay đổi */
+    will-change: opacity,transform;
+    display: none;
+}
+
+.header__notify::before {
+    position: absolute;
+    content: "";
+    border-width: 20px 32px;
+    border-style:solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    top: -28px;
+    right: 4px;
+}
+
+.header__notify::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 84px;
+    height: 20px;
+    right: 0;
+    top: -20px;
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        /*scale là để item lớn lên*/
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__notify-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.header__notify-header h3 {
+    color: #7c7979;
+    margin: 0 0 0 15px;
+    line-height: 40px;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.header__notify-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.header__notify-item {
+    display: flex;
+}
+
+.header__notify-item:hover {
+    background-color: rgba(246, 246, 246, 0.99);
+}
+
+/*css cho thông báo chưa đọc*/
+.header__notify-item--viewed {
+    background-color: rgba(71,97,254,0.1);
+}
+
+.header__notify-link {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    padding-left: 12px;
+    align-items: center;
+}
+
+.header__notify-img {
+    width: 48px;
+    object-fit: contain;
+}
+
+.header__notify-info {
+    margin-left: 12px;
+    padding: 10px 0;
+}
+
+.header__notify-name {
+    display: block;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.header__notify-description {
+    display: block;
+    color: #333333;
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    font-weight: 380;
+    padding-top: 4px;
+}
+
+.header__notify-footer {
+}
+
+.header__notify-footer-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    width: 100%;
+    padding: 8px 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+}
